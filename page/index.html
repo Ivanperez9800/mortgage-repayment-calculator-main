@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <div class="mortgage-calculator-container">
+
+      <!-- SECTION 1 -->
+
+      <section class="calculator-section">
+
+        <div class="calculator-header">
+          <h4>Mortgage Calculator</h4>
+          <span class="clear-all">Clear All</span>
+        </div>
+
+
+        <div class="form-box">
+          <form id="form" action="#">
+            <!-- INPUTS -->
+            <label for="mortgage_amount">Mortgage Amount</label>
+            <div class="input-group  ">
+              <i class="icon fa fa-usd" aria-hidden="true"></i>
+              <input type="number" id="mortgage_amount">
+                
+            </div>
+            <p class="error" >error</p>
+
+            <label for="mortgage_term">Mortgage Term</label>
+            <div class="input-group">
+
+              <input type="number" id="mortgage_term">
+              <p class="icon">Years</p>
+            </div>
+            <p class="error">error</p>
+            <label for="interest_rate">Interest Rate</label>
+            <div class="input-group">
+
+              <input type="number" id="interest_rate">
+              <i class="icon fa fa-percent" aria-hidden="true"></i>
+            </div>
+            <p class="error">error</p>
+            <!-- OPTIONS -->
+
+            <div class="mortgage-type-options">
+              <h4>Mortgage Type</h4>
+              <div class="radio-btn-group">
+                <input type="radio" name="mortgage_type" id="repayment" value="repayment">
+                <label for="repayment">Repayment</label>
+              </div>
+
+              <div class="radio-btn-group">
+                <input type="radio" name="mortgage_type" id="interest" value="interest" min="1" max="100" >
+                <label for="interest">Interest Only</label>
+              </div>
+              <p class="error">error</p>
+            </div>
+
+            <button type="button" class="calculate-button"><img src="./assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- SECTION 2 -->
+
+      <!-- Empty results start -->
+
+      <section class="results-section">
+        <div class="results-empty">
+
+          <img src="./assets//images/illustration-empty.svg" alt="">
+          <h3>Results shown here</h3>
+          <p>Complete the form and click <i>“calculate repayments”</i> to see what
+            your monthly repayments would be.</p>
+        </div>
+        <!-- Empty results end -->
+
+        <!-- Completed results start -->
+
+        <div class="results-completed">
+          <h3>Your results</h3>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
+            and
+            click
+            <i>“calculate repayments”</i> again.
+          </p>
+
+          <div class="calculated-results">
+            <div class="monthly">
+              <p class="monthly-repayments">Your monthly repayments</p>
+              <p class="monthly-total" >$50.0000</p>
+            </div>
+            <!-- RESULT 1 -->
+             <hr>
+             <div class="total">
+              <p class="total-repay">Total you'll repay over the term</p>
+              <p class="total-amount" >$350.000</p>
+             </div>
+            <!-- RESULT 2 -->
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- Completed results end -->
+    </div>
+
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Ivan Perez</a>.
+      </div>
+    </footer>
+
+  </main>
+
+
+
+  <script src="./main.js"></script>
+
+
+</body>
+
+</html>
